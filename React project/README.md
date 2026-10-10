@@ -1,16 +1,68 @@
-# React + Vite
+# Morph AI Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React + Vite landing page designed for an AI strategy and automation brand. The project includes a premium dark/light editorial aesthetic, scroll-based motion, and structured sections for messaging, team, services, and contact CTA.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive landing page layout
+- Modern hero section with geometric AI-inspired artwork
+- Team showcase cards
+- Services overview with premium card styling
+- Contact section and footer with branded links
+- Scroll-reactive 3D/parallax motion effects
+- Built with React and Vite
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+React project/
+├── index.html
+├── package.json
+├── src/
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── Components/
+│       ├── Navbar.jsx
+│       ├── Hero.jsx
+│       ├── About.jsx
+│       ├── Services.jsx
+│       └── Footer.jsx
+└── README.md
+```
+
+## Getting Started
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
+
+```bash
+npm run dev -- --host 0.0.0.0
+```
+
+3. Open the app in your browser:
+
+```text
+http://localhost:5173/
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## Notes
+
+This project was customized for a premium AI agency-style landing page and includes polished visuals inspired by modern SaaS and product marketing sites.
