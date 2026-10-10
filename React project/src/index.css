@@ -1,1 +1,97 @@
 @import "tailwindcss";
+
+:root {
+  --scroll-progress: 0;
+  --scroll-tilt: 0deg;
+  --scroll-lift: 0px;
+  --page-bg: #f3efe9;
+  --panel-shadow: rgba(17, 17, 17, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(241, 90, 10, 0.12), transparent 28%),
+    linear-gradient(180deg, #f4f2ef 0%, #f1eee9 26%, #f7f4ef 100%);
+  color: #111;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main.page-shell {
+  position: relative;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+section {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#approach {
+  transform: translate3d(0, calc(var(--scroll-progress) * -10px), 0) rotateX(calc(var(--scroll-progress) * 5deg));
+}
+
+#team {
+  transform: translate3d(0, calc(var(--scroll-progress) * 12px), 0) rotateX(calc(var(--scroll-progress) * -4deg));
+}
+
+#services {
+  transform: translate3d(0, calc(var(--scroll-progress) * 18px), 0) rotateX(calc(var(--scroll-progress) * -2deg));
+}
+
+#approach > div,
+#team > div,
+#services > div,
+footer > section,
+footer > div {
+  box-shadow: 0 18px 45px rgba(17, 17, 17, 0.04);
+  transform: translateZ(10px);
+}
+
+#team article,
+#services article {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transform-style: preserve-3d;
+}
+
+#team article:hover,
+#services article:hover {
+  transform: translateY(-10px) rotateY(3deg) rotateX(4deg);
+  box-shadow: 0 18px 35px rgba(17, 17, 17, 0.09);
+}
+
+#services article {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+}
+
+footer {
+  perspective: 1800px;
+}
+
+footer > section,
+footer > div {
+  transform: translateY(calc(var(--scroll-progress) * 14px)) rotateX(calc(var(--scroll-progress) * 2deg));
+}
+
+@media (max-width: 760px) {
+  #approach,
+  #team,
+  #services,
+  footer > section,
+  footer > div {
+    transform: none;
+  }
+}

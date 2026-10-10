@@ -140,8 +140,10 @@ const Footer = () => (
       <div className="relative z-[1] flex items-start justify-between gap-6 max-[600px]:flex-wrap">
         <a
           className="text-[14px] font-bold tracking-[-.045em] text-inherit no-underline"
-          href="#top"
-          aria-label="Morph AI home"
+          href="https://www.morph.ai"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Morph AI website"
         >
           MORPH AI
         </a>
