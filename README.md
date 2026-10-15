@@ -1,5 +1,5 @@
 Morph AI Landing Page
-A modern React + Vite landing page designed for an AI strategy and automation brand. The project includes a premium dark/light editorial aesthetic, scroll-based motion, and structured sections for messaging, team, services, and contact CTA.
+A highly modern React + Vite landing page designed for an AI strategy and automation brand. The project includes a premium and finest dark/light editorial aesthetic, scroll-based motion, and structured sections for messaging, team, services, and contact CTA.
 
 Features
 Responsive landing page layout
